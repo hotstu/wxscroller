@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="WXScroller" >
+        <attr name="sidebar" format="reference|color" />
+        <attr name="item_layout" format="reference" />
+        <attr name="popup_layout" format="reference" />
+        <attr name="android:width" />
+        <attr name="android:layout_marginTop" />
+        <attr name="android:layout_marginBottom" />
+    </declare-styleable>
+</resources>
