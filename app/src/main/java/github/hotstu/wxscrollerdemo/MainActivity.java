@@ -61,16 +61,6 @@ public class MainActivity extends AppCompatActivity {
                 return index+"";
             }
         });
-        fastScroller.show();
-        List<String> items = new ArrayList<>();
-        for (int i = 0; i < 100; i++) {
-            items.add("" + i);
-        }
-
-        adapter.addItems(items);
-        //adapter.addItems(Arrays.asList("1", "2"));
-        list.setAdapter(adapter);
-        list.setLayoutManager(layout);
         fastScroller.setOnScrollerGroupChangeListener(new WXScroller.OnScrollerGroupChangeListener() {
             @Override
             public void onChange(int index, String item) {
@@ -81,6 +71,17 @@ public class MainActivity extends AppCompatActivity {
                 layoutManager.scrollToPositionWithOffset(index * 10,0);
             }
         });
+        fastScroller.show();
+        List<String> items = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            items.add("" + i);
+        }
+
+        adapter.addItems(items);
+        //adapter.addItems(Arrays.asList("1", "2"));
+        list.setAdapter(adapter);
+        list.setLayoutManager(layout);
+
 
     }
 
