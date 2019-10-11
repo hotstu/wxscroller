@@ -19,8 +19,6 @@ import github.hotstu.wxscroller.WXScroller;
 
 
 public class MainActivity extends AppCompatActivity {
-
-
     private RecyclerView list;
 
     @Override
@@ -36,8 +34,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public RecyclerView.ViewHolder onCreateViewHolder(MOTypedRecyclerAdapter adapter, ViewGroup parent) {
                 View view = LayoutInflater.from(parent.getContext()).inflate(android.R.layout.simple_list_item_1, parent, false);
-                MOCommonViewHolder viewHolder = new MOCommonViewHolder(view);
-                return viewHolder;
+                return new MOCommonViewHolder(view);
             }
 
             @Override
@@ -50,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
         WXScroller fastScroller = new WXScroller(this);
         fastScroller.attachToRecyclerView(list);
         fastScroller.setScrollerGroupAdapter(new WXScroller.ScrollerGroupAdapter() {
@@ -86,6 +84,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void click(View view) {
-    }
 }

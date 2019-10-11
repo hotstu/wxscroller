@@ -31,3 +31,5 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     testImplementation 'junit:junit:4.12'
 }
+
+apply from: "../deployBintray.gradle"
